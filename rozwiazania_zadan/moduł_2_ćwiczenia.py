@@ -78,45 +78,4 @@ def wyswietl_menu():
     print("4. Zadanie 4")
     print("5. Zadanie 5")
     print("6. Zadanie 6")
-    print("7. Zakończ program")
-
-def pytanie_o_kontynuacje():
-    print("\n--- OPCJE ---")
-    print("1. Powrót do menu")
-    print("2. Przejdź do kolejnego zadania")
-    print("3. Zakończ program")
-    opcja = input("Wybierz opcję: ").strip()
-    return opcja
-
-def main():
-    zadania = [zadanie_1, zadanie_2, zadanie_3, zadanie_4, zadanie_5, zadanie_6]
-    while True:
-        wyswietl_menu()
-        wybor = input("Wybierz numer zadania (1-6) lub 7, aby zakończyć: ").strip()
-        if wybor == '7':
-            print("Koniec programu.")
-            break
-        elif wybor in map(str, range(1, len(zadania) + 1)):
-            index = int(wybor) - 1
-            zadania[index]()
-            while True:
-                opcja = pytanie_o_kontynuacje()
-                if opcja == '1':
-                    break
-                elif opcja == '2':
-                    if index + 1 < len(zadania):
-                        index += 1
-                        zadania[index]()
-                    else:
-                        print("Nie ma kolejnego zadania. Powrót do menu.")
-                        break
-                elif opcja == '3':
-                    print("Koniec programu.")
-                    return
-                else:
-                    print("Niepoprawna opcja. Spróbuj ponownie.")
-        else:
-            print("Niepoprawny wybór. Spróbuj ponownie.")
-
-if __name__ == "__main__":
-    main()
+    print("20. Powrót do menu głównego")

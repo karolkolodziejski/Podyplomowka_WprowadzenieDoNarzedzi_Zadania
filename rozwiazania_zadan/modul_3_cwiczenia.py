@@ -1,6 +1,6 @@
 import string
 
-def zadanie_1_2():
+def zadanie_1():
     print("Zadanie 1,2")
     lista_wejscie = [1,2,3,4,5,6,7,8,9,10]
     method = len(lista_wejscie) // 2
@@ -33,7 +33,7 @@ def zadanie_3():
 
     print(f"Unikalne znaki alfabetyczne to: {''.join(znaki_unikalne)}")
 
-def zadanie_4_5():
+def zadanie_4():
     miesiace_pl = {
         1: "styczeń",
         2: "luty",
@@ -102,51 +102,9 @@ def zadanie8():
 def wyswietl_menu():
     print("\n--- Moduł 3 rozwiązania zadań. Wybierz zadanie: ---")
     print("1. Zadania 1,2")
-    print("2. Zadanie 3")
-    print("3. Zadanie 4,5")
-    print("4. Zadanie 6")
-    print("5. Zadanie 7")
-    print("6. Zadanie 8")
-    print("7. Zakończ program")
-
-def pytanie_o_kontynuacje():
-    print("\n--- OPCJE ---")
-    print("1. Powrót do menu")
-    print("2. Przejdź do kolejnego zadania")
-    print("3. Zakończ program")
-    opcja = input("Wybierz opcję: ").strip()
-    return opcja
-
-def main():
-    zadania = [zadanie_1_2,zadanie_3,zadanie_4_5,zadanie_6, zadanie7, zadanie8]
-    while True:
-        wyswietl_menu()
-        wybor = input("Wybierz numer zadania (1-6) lub 7, aby zakończyć: ").strip()
-        if wybor == '7':
-            print("Koniec programu.")
-            break
-        elif wybor in map(str, range(1, len(zadania) + 1)):
-            index = int(wybor) - 1
-            zadania[index]()
-            while True:
-                opcja = pytanie_o_kontynuacje()
-                if opcja == '1':
-                    break
-                elif opcja == '2':
-                    if index + 1 < len(zadania):
-                        index += 1
-                        zadania[index]()
-                    else:
-                        print("Nie ma kolejnego zadania. Powrót do menu.")
-                        break
-                elif opcja == '3':
-                    print("Koniec programu.")
-                    return
-                else:
-                    print("Niepoprawna opcja. Spróbuj ponownie.")
-        else:
-            print("Niepoprawny wybór. Spróbuj ponownie.")
-
-
-if __name__ == "__main__":
-    main()
+    print("3. Zadanie 3")
+    print("4. Zadanie 4,5")
+    print("6. Zadanie 6")
+    print("7. Zadanie 7")
+    print("8. Zadanie 8")
+    print("20. Powrót do menu głównego")
